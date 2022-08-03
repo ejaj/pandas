@@ -1,0 +1,42 @@
+import pandas as pd
+
+# df = pd.read_csv('data/g_stock.csv')
+# print(df)
+# print(df.Date)
+# print(df.Date[0])
+
+# df = pd.read_csv('data/g_stock.csv', parse_dates=['Date'])
+# print(df)
+# print(type(df.Date[0]))
+# print(df.index)
+
+
+df = pd.read_csv('data/business_analysis.csv', index_col='Symbol', usecols=[0, 2, 3, 7])
+# print(df.head())
+# print(len(df))
+# print(df.shape)
+# print(df.size)
+# print(df.values)
+# print(df.index)
+# print(df['Sector'].head())
+# print(type(df['Sector']))
+# print(df[['Sector', 'Book Value']].head())
+# print(type(df[['Sector', 'Book Value']]))
+# print(df.Price)
+# print(df.loc['MMM'])
+# print(df.loc[['MMM','MSFT']])
+# print(df.iloc[[0, 2]])
+# i1 = df.index.get_loc('MMM')
+# i2 = df.index.get_loc('A')
+# print((i1, i2))
+#
+# print(df.iloc[[i1, i2]])
+# print(df.at['MMM', 'Price'])
+# print(df.iat[0, 1])
+# print(df[:5])
+# print(df['ABT':'ACN'])
+# print(df.Price < 100)
+# print(df[df.Price < 100])
+# print(df[(df.Sector == 'Health Care') & (df.Price > 100.00)][['Price', 'Sector']])
+
+print(df.loc[['ABT', 'ZTS']][['Sector', 'Price']])
